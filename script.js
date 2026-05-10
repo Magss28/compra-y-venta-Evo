@@ -53,7 +53,7 @@ database.ref('vehiculos').on('value', (snapshot) => {
                 <td style="color: #888;">$${v.precioCompra.toLocaleString()}</td>
                 <td style="color: #f1c40f;">$${v.precioVenta.toLocaleString()}</td>
                 <td><input type="checkbox" ${v.ftuning ? 'checked' : ''} onchange="actualizar('${v.id}', 'ftuning', this.checked)"></td>
-                <td><input type="number" value="${v.rendimientos}" min="0" onchange="actualizar('${v.id}', 'rendimientos', parseInt(this.value))"></td>
+                <td><input type="number" value="${v.rendimiento}" min="0" onchange="actualizar('${v.id}', 'rendimientos', parseInt(this.value))"></td>
                 <td class="precio-final">$${total.toLocaleString()}</td>
             `;
             tbody.appendChild(fila);
